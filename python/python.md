@@ -140,7 +140,7 @@ nvh.py get file.nvh 'hw.sense.example.quality=good,hw.sense.example.quality=bad'
 
 ## Merging two NVH files
 
-The `nvh.py put DB PATCH_DB` command merges the `PATCH_DB` NVH file into the `DB` NVH file. It takes an optional argument representing replacing filters indicating which say which elements of the `PATCH_DB` NVH file should be actually merged.
+The `nvh.py put DB PATCH_DB` command merges the `PATCH_DB` NVH file into the `DB` NVH file. It takes an optional argument representing replacing filters indicating which elements of the `PATCH_DB` NVH file should be actually merged.
 
 ```
 nvh.py put file.nvh patch.nvh hw.sense.example
@@ -148,7 +148,7 @@ nvh.py put file.nvh patch.nvh hw.sense.example
 
 Replace all the `hw.sense.example` for all the `hw.sense` in `file.nvh` with those present in `patch.nvh`, i.e. the `file.nvh` will only contain the items present in `patch.nvh`.
 
-If you put an exclamation mark right after a replace filter in nvh put, it will replace only these elements whose values are present in the data, i.e. this:
+If you put an exclamation mark right after a replace filter used in `nvh put`, it will replace only those elements whose values are present in the data, i.e. this:
 
 ```
 nvh.py put tagalog.nvh patch.nvh hw.sense.example!
